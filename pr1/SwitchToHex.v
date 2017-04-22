@@ -15,4 +15,7 @@ output reg [6:0] HEX7, HEX6, HEX5, HEX4//七段顯示器
         CharToHex(A0,HEX6);
         CharToHex(B1,HEX5);
         CharToHex(B0,HEX4);
+        integer Output;
+        ALU(A,B,SW[1:0],Output);
+        OutputToHex(Output,Hex3,Hex2,Hex1,Hex0);
 endmodule
